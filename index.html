@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylebackground.css">
+	<link rel="shortcut icon" href="img/icono_recoger.svg" type="image/x-icon">
+    <title>Atrapa ous!</title>
+</head>
+
+<body>
+    <h1 class="titulo">Atrapa tots els ous!</h1>
+
+    <!-- Fondo -->
+    <main id="fondo">
+        <div class="circle cataleg"></div>
+        <div class="circle ajuda"></div>
+        <div class="circle explorador"></div>
+        <div class="circle tramits"></div>
+    </main>
+    <img src="img/conejito.svg" class="conejito1 fondo">
+    <img src="img/conejito.svg" class="conejito2 fondo">
+    <p id="score">Punts: 0</p>
+    <p id="timer">00:00</p>
+    <div class="juego" id="gamebox" onmouseenter="track(true)" onmouseleave="track(false)"></div>
+    <img id="cesta" src="img/cesta.svg">
+    <div id="menu-inicial">
+        <h2>Atrapa tots els ous!</h2>
+        <div id="row1">
+            <img src="img/huevo1.svg" alt="Ou de pasqua" title="Ou de pasqua">
+            <p> = <span class="bien">+1</span></p>
+        </div>
+        <div id="row2">
+            <img src="img/huevo-roca.svg" alt="Pedra" title="Pedra">
+            <p> = <span class="mal">-1</span></p>
+        </div>
+        <button onclick="comenzar()">Començar</button>
+    </div>
+    <div id="menu-timeOut">
+        <h2>Molt bé!</h2>
+        <p id="puntos-final">Has aconseguit: 0 punts</p>
+        <a href="">Tornar a jugar</a>
+    </div>
+    <script src="js/script.js"></script>
+	<script src="../../comun/js/javascript_volver.js"></script>
+</body>
+
+</html>

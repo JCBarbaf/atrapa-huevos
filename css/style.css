@@ -1,0 +1,188 @@
+/* QUITAR */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/* */ 
+:root {
+  --direction: 360deg;
+  --timeFall: 20s;
+}
+body {
+  overflow: hidden;
+  background-color: var(--background-color);
+  font-family: "Varela Round", sans-serif;
+}
+#score {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  font-size: 50px;
+}
+#timer {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  font-size: 50px;
+}
+#menu-inicial {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1200px;
+  height: fit-content;
+  background-color: #D1CFC3;
+  border: 10px solid #B5B19A;
+  border-radius: 100px;
+}
+div h2 {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 100px;
+  text-align: center;
+}
+#menu-inicial div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+.bien {
+  font-weight: bold;
+  color: green;
+}
+.mal {
+  font-weight: bold;
+  color: red;
+}
+#menu-inicial div img {
+  width: 10%;
+}
+#menu-inicial button, #menu-timeOut a {
+  display: block;
+  width: fit-content;
+  font-family: "Varela Round";
+  background-color: #E9E7DB;
+  border: 5px solid #B5B19A;
+  border-radius: 100px;
+  font-size: 50px;
+  padding: 40px;
+  margin: 40px auto;
+}
+#menu-inicial button:hover,  #menu-timeOut a:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+#menu-inicial button:active, #menu-timeOut a:active {
+  filter: brightness(0.8);
+}
+#menu-timeOut {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1200px;
+  height: 700px;
+  background-color: #D1CFC3;
+  border: 10px solid #B5B19A;
+  border-radius: 100px;
+}
+#menu-timeOut p {
+  font-size: 80px;
+  text-align: center;
+}
+#menu-timeOut a {
+  text-decoration: none;
+  color: black;
+}
+#gamebox {
+  width: 1400px;
+  height: 700px;
+  background-image: url(../img/cielo.svg);
+  background-size: contain;
+  margin: auto;
+  border: 10px solid #B5B19A;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
+#gamebox:hover {
+  cursor: none;
+}
+#gamebox img[src*="huevo"] {
+  animation-name: spin;
+  animation-duration: var(--timeFall);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.bounce {
+  animation-name: bounce;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform: rotate(var(--direction));
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+#cesta {
+    position: absolute;
+    width: 240px;
+    top: 700px;
+    left: 40%;
+    pointer-events: none;
+}
+.fondo {
+	position: absolute;
+	z-index: -10;
+}
+.conejito1 {
+  width: 180px;
+  bottom: 150px;
+  left: 50px;
+  animation-name: dance;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+.conejito2 {
+  width: 150px;
+  top: 70px;
+  right: 170px;
+  animation-name: dance;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes dance {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
